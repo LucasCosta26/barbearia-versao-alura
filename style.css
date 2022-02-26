@@ -1,0 +1,156 @@
+/*header*/
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: "montserrat", sans-serif;
+}
+header {
+  background-color: bisque;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.caixa {
+  
+  position: relative;
+  margin: 0 auto;
+}
+nav {
+  position: absolute;
+  top: 120px;
+  right: 0px;
+}
+nav ul,
+li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+nav ul li a {
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+/*imagem das cadeiras*/
+.banner {
+  width: 100%;
+}
+/*main*/
+.principal {
+  padding-bottom: 20px;
+  clear: left;
+}
+.titulo-centralizado {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 0 1em;
+}
+.titulo-centralizado::first-letter {
+  font-weight: bold;
+}
+.titulo-centralizado::before {
+  content: "{ ";
+}
+.titulo-centralizado::after {
+  content: "} ";
+}
+.utensilios {
+  width: 120px;
+  float: left;
+  margin: 20px;
+}
+.principal p {
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 1em;
+}
+.missao {
+  font-size: 20px;
+}
+em strong {
+  color: blue;
+}
+.mapa {
+  width: 940px;
+  margin: 10px auto;
+}
+
+.mapa p {
+  margin: 10px;
+  text-align: center;
+}
+main {
+  background-image: linear-gradient(bisque, rgb(109, 109, 109));
+}
+.conteudo-bene {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-bene {
+  font-size: 1em;
+  width: 40%;
+
+  display: inline-block;
+  padding: 1em;
+  vertical-align: top;
+}
+.lista-bene li {
+  display: block;
+  line-height: 1.5;
+}
+.itens:first-child {
+  font-weight: bold;
+}
+.itens::before {
+  content: "✯ ";
+}
+
+.img-beneficio {
+  width: 50%;
+  border-radius: 15px;
+  transition: 1s;
+  box-shadow: 10px 10px 5px black;
+}
+.img-beneficio:hover {
+  opacity: 0.7;
+}
+.video {
+  width: 560px;
+  margin: 1em auto;
+}
+main > p {
+  /*serve para pegar apenas os P´s filhos diretos do main*/
+}
+img + p {
+  /*consigo pegar o primeiro IRMAO do elemento*/
+}
+img ~ p {
+  /* já aqui eu pego todos os irmaos p´s */
+}
+.principal p:not(.missao) {
+  /*aqui eu consigo excluir um ID ou Uma CLASS de ser modificado*/
+}
+/*para eu que eu consiga deixar o tamanho de um elemento adaptável posso usar % e ainda dizer para o browser calcular conforme parametros pré definidos da seguinte forma: width: calc((100%/3)-10px), este é apenas um exemplo do que pode ser feito*/
+
+footer {
+  color: white;
+  text-align: center;
+  background-image: url(img-produto/bg.jpg); /*aqui a img fica atras do conteudo html*/
+}
+footer p {
+  font-size: 13px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 480px){
+.caixa, .principal, .conteudo-bene, .mapa, .video  { width: auto;} 
+h1, nav { text-align: center;}
+nav{ position: static;}
+}

@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "montserrat", sans-serif;
+}
+header {
+  background-color: bisque;
+}
+.caixa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.caixa li {
+  display: inline;
+}
+.caixa a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: x-large;
+  font-weight: 800;
+  padding-left: 0.5em;
+  color: black;
+}
+.caixa a:hover {
+  color: white;
+  text-decoration: underline;
+}
+/*segunda imagem*/
+.banner {
+  width: 100%;
+  height: auto;
+}
+/*começo do main*/
+.titulo-centralizado {
+  font-size: 2em;
+  margin: 1em;
+  text-align: center;
+}
+.central {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 70%;
+  margin: auto;
+}
+.utensilios {
+  width: 120px;
+  height: 120px;
+}
+.principal p {
+  font-size: x-large;
+  padding: 10px 10px;
+  text-indent: 20px;
+}
+strong {
+  color: rgb(255, 196, 196);
+}
+/*seçao mapa*/
+.mapa p {
+  padding: 10px 20px;
+  text-align: center;
+}
+#mapa-conteudo {
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+}
+/*beneficios*/
+.beneficio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 50%;
+  margin: auto;
+}
+.beneficio li::before {
+  content: "✯ ";
+}
+.beneficio li {
+  padding: 0 0 10px;
+}
+.img-beneficio {
+  width: 40%;
+  height: auto;
+}
+/*video*/
+.video {
+  margin: 10px;
+}
+/*footer*/
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .caixa,
+  h1,
+  nav,
+  a,
+  .banner .central {
+    text-align: center;
+    font-size: small;
+  }
+  .utensilios {
+    width: 60px;
+    height: 60px;
+  }
+  .img-beneficio {
+    width: 120px;
+    height: 100px;
+  }
+  .beneficio li {
+    font-size: 1em;
+  }
+  .beneficio,
+  .central {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 0 0 2px;
+  }
+}
